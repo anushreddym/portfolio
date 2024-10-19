@@ -1,0 +1,455 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+mark.blue {
+    color: rgb(58, 140, 202);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    height: 2500px;
+    background: url("/tile.png");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+    background-attachment: fixed;
+}
+
+.wrapper {
+    z-index: 1;
+    position: relative;
+    margin: 150px auto;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    top: 50px;
+    background: #ECEFF1;
+    padding: 30px 30px;
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius: 250px;
+    transition: all 0.5s linear;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.wrapper::after, .wrapper::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.wrapper.animate {
+    animation: moveUpDown 4s ease-in-out infinite;
+}
+
+.wrapper::after {
+    width: 250px;
+    height: 250px;
+    top: -70px;
+    left: 145px;
+}
+
+.wrapper::before {
+    width: 350px;
+    height: 350px;
+    top: -115px;
+    right: 195px;
+}
+
+.logo {
+    max-width: 200px;
+    margin-left: 50px;
+}
+
+.text_content {
+    color: rgb(0, 0, 0);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.text {
+    position: relative;
+    top: 0;
+}
+
+.heading {
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.info {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+.links {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 30px;
+}
+
+.link {
+    color: black;
+    transition: all 0.2s;
+}
+
+.link:hover {
+    color: rgb(58, 140, 202);
+    transform: scale(1.2);
+}
+
+.btns {
+    display: flex;
+    margin-right: auto;
+    column-gap: 10px;
+    margin-top: auto;
+}
+
+.btn {
+    background-color: rgb(58, 140, 202);
+    text-decoration: none;
+    color: black;
+    padding: 12px 18px;
+    transition: all 0.2s;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.about {
+    margin: 150px auto;
+    width: 830px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    top: 50px;
+    background-color: #ECEFF1;
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+}
+
+.about_heading {
+    font-size: 42px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.about_heading_description {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.about_header {
+    background: rgb(58, 140, 202);
+    padding: 15px;
+    border-radius: 8px; 
+    font-weight: 400;
+}
+
+.about_main_text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin: 15px 15px;
+}
+
+.projects {
+    margin: 150px auto;
+    width: 900px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    top: 50px;
+    background: #ECEFF1;
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+}
+
+.projects_heading {
+    font-size: 42px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.projects_heading_description {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.projects_holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 35px;
+    row-gap: 15px;
+    width: 100%;
+    height: auto;
+    justify-content: center; 
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    background: #4094DD;
+    border: none;
+    transition: all 0.2s;
+    z-index: 1;
+    position: relative; 
+}
+
+.card_body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 15px; 
+    transition: all 0.2s;
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card_title {
+    opacity: 0;
+    transition: all 0.2s;
+    font-size: 20px;
+    font-weight: 600;
+    top: 0;
+}
+
+.card_description {
+    opacity: 0;
+    transition: all 0.2s;
+    font-size: 14   px;
+}
+
+.card:hover .card_title, .card:hover .card_description {
+    opacity: 100;
+}
+
+.card_body:hover {
+    backdrop-filter: blur(5px); 
+}
+
+.card_logo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+@media (max-width: 850px) {
+
+    body {
+        height: 4000px;
+    }
+    .wrapper {
+        flex-direction: column;
+        margin-left: auto;
+        width: 70%;
+        padding: 50px 30px;
+        border-radius: 175px;
+    }
+
+    .wrapper::before, .wrapper::after {
+        content: none;
+    }
+
+    .logo {
+        margin: 0;
+        align-self: center;
+        margin-top: 5px;
+        max-width: 350px;
+    }
+
+    .text_content {
+        margin-left: 0px;
+    }
+    
+    .text {
+        position: relative;
+        top: 0;
+        text-align: center;
+    }
+    
+    .heading {
+        font-size: 45px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .description {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+    
+    .info {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: 400;
+        max-width: 500px;
+    }
+    
+    .links {
+        display: flex;
+        column-gap: 15px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    
+    .btns {
+        display: flex;
+        margin-right: auto;
+        column-gap: 15px;
+        margin-top: auto;
+        margin-left: auto;
+        justify-content: center;
+    }
+
+    .about {
+        width: 70%;
+        align-items: center;
+    }
+    
+    .about_heading {
+        text-align: center;
+    }
+    
+    .about_heading_description {
+        justify-content: center;
+    }
+    
+    .about_main_text {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        max-width: 350px;
+    }
+
+    .projects {
+        width: 70%;
+        align-items: center;
+    }
+    
+    .projects_heading {
+        text-align: center;
+    }
+    
+    .projects_heading_description {
+        justify-content: center;
+    }
+    
+    .projects_main_text {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        max-width: 350px;
+    }
+
+    .projects_holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 350px;
+    }
+
+    .card:hover {
+        cursor: pointer;
+    }
+    
+    .card_title {
+        opacity: 100;
+        transition: all 0.2s;
+        font-size: 20px;
+        font-weight: 600;
+        top: 0;
+    }
+    
+    .card_description {
+        opacity: 100;
+        transition: all 0.2s;
+        font-size: 14px;
+    }
+    
+    .card:hover .card_title, .card:hover .card_description {
+        cursor: pointer;
+    }
+    
+    .card_body:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 550px) {
+    .logo {
+        max-width: 250px;
+    }
+
+    .projects_holder {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+}
