@@ -3,14 +3,13 @@ import "../styles/landing.css"
 import logoImage from "../assets/logo.png"
 import solarsystemImage from "../assets/solarsystem.png"
 import NavBarHeader from "../layouts/NavBarHeader.astro"
+import Footer from "../layouts/Footer.astro"
 ---
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/f00d779dcd.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,20 +25,42 @@ import NavBarHeader from "../layouts/NavBarHeader.astro"
             <div class="text">
                 <h1 class="heading">Hey, I'm <mark class="blue">Anush</mark>.</h1>
                 <p class="description">Aspiring developer and highschool student</p>
-                <p class="info">I am passionate about game development and exploring new technology. My goal is to continue growing as a developer. Welcome to my portfolio!</p>
+                <p class="info">I am passionate about game development, programming, and exploring new technology. My goal is to continue growing as a developer. Welcome to my portfolio!</p>
             </div>
         </div>
         <img src={logoImage.src} alt="" class="logo">
     </div>
+
+    <div class="buttons_holder">
+        <div class="top_row">
+            <div class="btn">
+                <button class="link">Lorem</button>
+            </div>
+            <div class="btn">
+                <button class="link">Lorem</button>
+            </div>
+            <div class="btn">
+                <button class="link">Lorem</button>
+            </div>
+        </div>
+        <div class="bottom_row">
+            <div class="btn" id="long">
+                <button class="link">Lorem</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="current_project">
+        <p class="project_head">Current Project:</p>
+        <div class="project_image_holder">
+            <img src={solarsystemImage.src} alt="" class="project_image">
+        </div>
+    </div>
+    <Footer/>
 </body>
 </html>
 
 <script is:inline>
-    window.addEventListener("scroll", function() {
-        let scrolled = this.window.scrollY;
-        this.document.body.style.backgroundPositionY = -(scrolled * 0.05) + "px";
-    });
-
     const wrapper = document.querySelector('.wrapper');
 
     const observer = new IntersectionObserver((entries) => {

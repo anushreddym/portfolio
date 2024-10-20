@@ -11,7 +11,7 @@ mark.blue {
 }
 
 body {
-    height: 2500px;
+    height: 2120px;
     background: url("/tile.png");
     background-repeat: repeat;
     display: flex;
@@ -115,10 +115,72 @@ body {
     max-width: 500px;
 }
 
-@media (max-width: 850px) {
+.buttons_holder {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.top_row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+.bottom_row {
+    display: flex;
+}
+
+.btn {
+    background: white;
+    width: 280px;
+    height: 200px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+}
+
+.btn#long {
+    width: 100%;
+    height: 230px; 
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.current_project {
+    background-color: rgb(73, 125, 239);
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    row-gap: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project_head {
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.project_image {
+    border-radius: 24px;
+    border: 3px dashed #ffffff;
+}
+
+@media (max-width: 940px) {
 
     body {
-        height: 4000px;
+        height: 2750px;
     }
     .wrapper {
         flex-direction: column;
@@ -168,14 +230,82 @@ body {
         font-weight: 400;
         max-width: 500px;
     }
+
+    .buttons_holder {
+        margin-top: 100px;
+        row-gap: 30px;
+        width: 100%;
+    }
+    
+    .top_row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    
+    .bottom_row {
+        display: flex;
+    }
+    
+    .btn {
+        background: white;
+        width: 70%;
+        height: 200px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 10px 10px rgba(0,0,0,0.2);
+        transition: all 0.2s;
+        transform: scale(1);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .btn#long {
+        width: 70%;
+        height: 200px; 
+    }
+
+    .btn:hover {
+        
+    }
+
+    .current_project {
+        width: 100%;
+        margin-top: 100px;
+        height: 475px;
+        row-gap: 10px;
+    }
+    
+    .project_head {
+        font-size: 36px;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+    }
+
+    .project_image {
+        transform: scale(0.8);
+    }
 }
 
 @media (max-width: 520px) {
+    body {
+        height: 2550px;
+    }
+
     .logo {
         display: none;
     }
 
     .wrapper {
         margin-top: -50px;
+    }
+}
+
+@media (max-width: 385px) {
+    body {
+        height: 2550px;
     }
 }
