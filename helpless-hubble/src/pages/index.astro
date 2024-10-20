@@ -1,7 +1,8 @@
 ---
-import "../styles/styles.css"
+import "../styles/landing.css"
 import logoImage from "../assets/logo.png"
 import solarsystemImage from "../assets/solarsystem.png"
+import NavBarHeader from "../layouts/NavBarHeader.astro"
 ---
 
 <html lang="en">
@@ -19,64 +20,16 @@ import solarsystemImage from "../assets/solarsystem.png"
     <title>Portfolio</title>
 </head>
 <body>
+	<NavBarHeader/>
     <div class="wrapper">
         <div class="text_content">
             <div class="text">
                 <h1 class="heading">Hey, I'm <mark class="blue">Anush</mark>.</h1>
                 <p class="description">Aspiring developer and highschool student</p>
-                <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, dolore maxime earum ut rem maiores!</p>
+                <p class="info">I am passionate about game development and exploring new technology. My goal is to continue growing as a developer. Welcome to my portfolio!</p>
             </div>
         </div>
         <img src={logoImage.src} alt="" class="logo">
-    </div>
-
-    <div class="about">
-        <h1 class="about_heading">ABOUT</h1>
-        <div class="about_text_holder">
-            <div class="about_heading_description">
-                <i class="fa-solid fa-address-card"></i>
-                <p class="about_text">About me</p>
-            </div>
-            <p class="about_header">Background</p>
-            <p class="about_main_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates culpa hic esse tempore numquam vero! Nulla quibusdam adipisci aliquam expedita consequuntur soluta molestias, quaerat dignissimos corporis, ipsum consequatur rerum? Deserunt corrupti officia eum perspiciatis. Temporibus, saepe error at inventore quae nemo rem ut, sequi mollitia perferendis minus et officiis possimus?</p>
-            <p class="about_header">Interests</p>
-            <p class="about_main_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates culpa hic esse tempore numquam vero! Nulla quibusdam adipisci aliquam expedita consequuntur soluta molestias, quaerat dignissimos corporis, ipsum consequatur rerum? Deserunt corrupti officia eum perspiciatis. Temporibus, saepe error at inventore quae nemo rem ut, sequi mollitia perferendis minus et officiis possimus?</p>
-            <p class="about_header">Skills</p>
-            <p class="about_main_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates culpa hic esse tempore numquam vero! Nulla quibusdam adipisci aliquam expedita consequuntur soluta molestias, quaerat dignissimos corporis, ipsum consequatur rerum? Deserunt corrupti officia eum perspiciatis. Temporibus, saepe error at inventore quae nemo rem ut, sequi mollitia perferendis minus et officiis possimus?</p>
-        </div>
-    </div>
-
-    <div class="projects">
-        <h1 class="projects_heading">PROJECTS</h1>
-        <div class="projects_text_holder">
-            <div class="projects_heading_description">
-                <i class="fa-solid fa-rocket"></i>
-                <p class="projects_text">My Projects</p>
-            </div>
-            <div class="projects_holder">
-                <button class="card" id="project_1">
-                    <img src={solarsystemImage.src} alt="" class = "card_logo">
-                    <div class="card_body">
-                        <p class="card_title">Orrery</p>
-                        <p class="card_description">Made in Godot engine.</p>
-                    </div>
-                </button>
-                <button class="card" id="project_1">
-                    <img src="images/solarsystem.png" alt="" class = "card_logo">
-                    <div class="card_body">
-                        <p class="card_title">Orrery</p>
-                        <p class="card_description">Made in Godot engine.</p>
-                    </div>
-                </button>
-                <button class="card" id="project_1">
-                    <img src="images/solarsystem.png" alt="" class = "card_logo">
-                    <div class="card_body">
-                        <p class="card_title">Orrery</p>
-                        <p class="card_description">Made in Godot engine.</p>
-                    </div>
-                </button>
-            </div>
-        </div>
     </div>
 </body>
 </html>
