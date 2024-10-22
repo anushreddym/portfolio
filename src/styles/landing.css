@@ -12,7 +12,7 @@ mark.blue {
 
 body {
     height: 2120px;
-    background: url("/tile.png");
+    background: url("../assets/tile.png");
     background-repeat: repeat;
     display: flex;
     flex-direction: column;
