@@ -269,7 +269,7 @@ body {
     }
 
     .btn:hover {
-        
+        transform: scale(1);
     }
 
     .current_project {
