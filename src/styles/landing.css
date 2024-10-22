@@ -21,6 +21,10 @@ body {
     background-attachment: fixed;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 .wrapper {
     z-index: 1;
     position: relative;
@@ -151,6 +155,7 @@ body {
 
 .btn:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .current_project {
@@ -290,9 +295,9 @@ body {
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 635px) {
     body {
-        height: 2550px;
+        height: 2350px;
     }
 
     .logo {
@@ -304,7 +309,13 @@ body {
     }
 }
 
-@media (max-width: 385px) {
+@media (max-width: 540px) {
+    body {
+        height: 2450px;
+    }
+}
+
+@media (max-width: 380px) {
     body {
         height: 2550px;
     }
