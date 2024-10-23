@@ -43,15 +43,30 @@ import ("../styles/navbar.css")
 
 <script>
     const toggleButton = document.querySelector('.toggle_button') as HTMLElement;
-    const dropMenu = document.querySelector('.drop_menu') as HTMLElement;;
+    const dropMenu = document.querySelector('.drop_menu') as HTMLElement;
     const body = document.body;
-    const menuIcon = document.getElementById('menu-icon') as HTMLElement;;
-    const closeIcon = document.getElementById('close-icon') as HTMLElement;;
+    const menuIcon = document.getElementById('menu-icon') as HTMLElement;
+    const closeIcon = document.getElementById('close-icon') as HTMLElement;
+
+    function hideMenu() {
+        if (dropMenu) {
+            dropMenu.style.left = '-100%';
+            dropMenu.style.display = 'none'; 
+            body.classList.remove('menu-open');
+        }
+        if (menuIcon && closeIcon) {
+            menuIcon.style.display = 'block'; 
+            closeIcon.style.display = 'none'; 
+        }
+        if (toggleButton) {
+            toggleButton.classList.remove('active');
+        }
+    }
 
     if (toggleButton) {
         toggleButton.addEventListener('click', () => {
             toggleButton.classList.toggle('active');
-            
+
             if (toggleButton.classList.contains('active')) {
                 if (dropMenu) {
                     dropMenu.style.display = 'flex';
@@ -79,4 +94,10 @@ import ("../styles/navbar.css")
             }
         });
     }
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 635) {
+            hideMenu(); 
+        }
+    });
 </script>
+

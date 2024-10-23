@@ -11,7 +11,7 @@ mark.blue {
 }
 
 body {
-    height: 2120px;
+    height: 1400px;
     background: url("../assets/tile.png");
     background-repeat: repeat;
     display: flex;
@@ -34,7 +34,7 @@ body.menu-open {
     align-items: center;
     justify-content: center;
     align-self: center;
-    top: 100px;
+    top: 75px;
     background: #ECEFF1;
     padding: 30px 30px;
     box-shadow: 10px 10px rgba(0,0,0,0.2);
@@ -158,34 +158,10 @@ body.menu-open {
     cursor: pointer;
 }
 
-.current_project {
-    background-color: rgb(73, 125, 239);
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 550px;
-    row-gap: 40px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project_head {
-    font-size: 45px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-}
-
-.project_image {
-    border-radius: 24px;
-    border: 3px dashed #ffffff;
-}
-
 @media (max-width: 940px) {
 
     body {
-        height: 2750px;
+        height: 2100px;
     }
     .wrapper {
         flex-direction: column;
@@ -276,28 +252,11 @@ body.menu-open {
     .btn:hover {
         transform: scale(1);
     }
-
-    .current_project {
-        width: 100%;
-        margin-top: 100px;
-        height: 475px;
-        row-gap: 10px;
-    }
-    
-    .project_head {
-        font-size: 36px;
-        font-weight: 600;
-        color: rgb(255, 255, 255);
-    }
-
-    .project_image {
-        transform: scale(0.8);
-    }
 }
 
 @media (max-width: 635px) {
     body {
-        height: 2350px;
+        height: 1600px;
     }
 
     .logo {
@@ -305,18 +264,29 @@ body.menu-open {
     }
 
     .wrapper {
-        margin-top: -50px;
+        margin-top: -35px;
+        margin-bottom: 35px;
     }
 }
 
 @media (max-width: 540px) {
     body {
-        height: 2450px;
+        height: 1650px;
+    }
+
+    .wrapper {
+        margin-top: -35px;
+        margin-bottom: 35px;
     }
 }
 
 @media (max-width: 380px) {
     body {
-        height: 2550px;
+        height: 1750px;
+    }
+
+    .wrapper {
+        margin-top: -35px;
+        margin-bottom: 35px;
     }
 }
