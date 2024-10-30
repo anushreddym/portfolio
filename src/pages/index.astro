@@ -2,8 +2,6 @@
 import "../styles/landing.css"
 import logoImage from "../assets/logo.png"
 import solarsystemImage from "../assets/solarsystem.png"
-import NavBarHeader from "../layouts/NavBarHeader.astro"
-import Footer from "../layouts/Footer.astro"
 ---
 
 <html lang="en">
@@ -19,52 +17,13 @@ import Footer from "../layouts/Footer.astro"
     <title>Portfolio</title>
 </head>
 <body>
-	<NavBarHeader/>
     <div class="wrapper">
-        <div class="text_content">
-            <div class="text">
-                <h1 class="heading">Hey, I'm <mark class="blue">Anush</mark>.</h1>
-                <p class="description">Aspiring developer and highschool student</p>
-                <p class="info">I am passionate about game development, programming, and exploring new technology. My goal is to continue growing as a developer. Welcome to my portfolio!</p>
-            </div>
-        </div>
-        <img src={logoImage.src} alt="" class="logo">
-    </div>
-
-    <div class="buttons_holder">
-        <div class="top_row">
-            <div class="btn">
-                <button class="link">Lorem</button>
-            </div>
-            <div class="btn">
-                <button class="link">Lorem</button>
-            </div>
-            <div class="btn">
-                <button class="link">Lorem</button>
-            </div>
-        </div>
-        <div class="bottom_row">
-            <div class="btn" id="long">
-                <button class="link">Lorem</button>
-            </div>
+        <div class="text">
+            <h1 class="heading">Hey, I'm <mark class="blue">Anush</mark>.</h1>
+            <p class="description">High school student and game development enthusiast</p>
+            <p class="info">exploring code and technology.</p>
+            <button class="projects">View Projects</button>
         </div>
     </div>
-    <Footer/>
 </body>
 </html>
-
-<script is:inline>
-    const wrapper = document.querySelector('.wrapper');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                wrapper.classList.add('animate');
-            } else {
-                wrapper.classList.remove('animate');
-            }
-        });
-    });
-
-    observer.observe(wrapper);
-</script>
