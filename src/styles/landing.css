@@ -11,7 +11,7 @@ mark.blue {
 }
 
 body {
-    height: 1400px;
+    height: 5000px;
     background: url("../assets/tile.png");
     background-repeat: repeat;
     display: flex;
@@ -42,16 +42,10 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: rgb(157, 157, 157);
-}
-
-.info {
-    font-size: 20px;
-    font-weight: 400;
-    color: rgb(157, 157, 157);
     margin-bottom: 20px;
 }
 
-.projects {
+.project_btn {
     font-size: 16px;
     color: rgb(225, 225, 225);
     background-color: #1b1a1a;
@@ -59,4 +53,78 @@ body {
     padding: 10px 14px;
     border-radius: 6px;
     font-weight: 500;
+}
+
+.sections {
+    margin-top: 40vh;
+    background-color: #0A0A0A;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.about {
+    display: flex;
+    flex-direction: column; 
+    align-items: start; 
+    padding-top: 150px;
+    padding-left: 24rem;
+    padding-right: 24rem;
+    text-align: left;
+}
+
+.about_holder {
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.about_heading {
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px; 
+}
+
+.about_text_holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.about_description {
+    font-size: 16px;
+    color: rgb(157, 157, 157);
+    max-width: fit-content;
+    margin-bottom: 15px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column; 
+    align-items: start; 
+    padding-top: 150px;
+    padding-left: 24rem;
+    padding-right: 24rem;
+    text-align: left;
+    padding-bottom: 500px;
+}
+
+.projects_header {
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px; 
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }

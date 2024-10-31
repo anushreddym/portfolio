@@ -1,0 +1,10 @@
+---
+const {image, name, description} = Astro.props;
+import '../styles/tile.css'
+---
+
+<div class="project_tile">
+    <img src={image} alt={name} class="project_image" />
+    <h2 class="project_name">{name}</h2>
+    <p class="project_description">{description}</p>
+</div>

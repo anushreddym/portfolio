@@ -1,0 +1,33 @@
+.project_tile {
+    width: calc(50% - 20px);
+    height: 405px;
+    background-color: #1b1a1a;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.project_tile:hover {
+    transform: scale(1.05);
+}
+
+.project_image {
+    padding: 15px 15px;
+    border-radius: 25px;
+}
+
+.project_name {
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.project_description {
+    font-size: 16px;
+    color: rgb(157, 157, 157);
+    font-weight: 400;
+    padding: 0 15px;
+}

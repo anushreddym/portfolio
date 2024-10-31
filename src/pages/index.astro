@@ -2,7 +2,10 @@
 import "../styles/landing.css"
 import logoImage from "../assets/logo.png"
 import solarsystemImage from "../assets/solarsystem.png"
+import Tile from "../components/Tile.astro"
 ---
+
+
 
 <html lang="en">
 <head>
@@ -20,9 +23,30 @@ import solarsystemImage from "../assets/solarsystem.png"
     <div class="wrapper">
         <div class="text">
             <h1 class="heading">Hey, I'm <mark class="blue">Anush</mark>.</h1>
-            <p class="description">High school student and game development enthusiast</p>
-            <p class="info">exploring code and technology.</p>
-            <button class="projects">View Projects</button>
+            <p class="description">High school student and game development enthusiast <br>exploring code and technology.</p>
+            <button class="project_btn">View Projects</button>
+        </div>
+    </div>
+
+    <div class="sections">
+        <div class="about">
+            <h1 class="about_heading">About</h1> 
+            <div class="about_holder">
+                <div class="about_text_holder">
+                    <p class="about_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nobis aperiam repudiandae quas quae porro voluptas aspernatur ducimus, accusamus quos temporibus error facere. Consequuntur ducimus saepe voluptas dolor tempora officia sed. Distinctio soluta commodi accusantium voluptas. Qui, blanditiis. Numquam similique eius quis ipsam, quisquam consequatur nostrum odio veniam et. Corporis, rem? Cumque minima soluta quasi, aperiam voluptatem id ab aut animi modi sed, ullam nam at error labore iusto commodi quod eaque doloremque quos eos?</p>
+                    <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni excepturi sed nostrum quasi id laudantium tenetur accusamus impedit magnam! Nam, rerum fuga voluptatibus nihil quis consequuntur harum obcaecati accusantium vitae quibusdam, fugiat earum, repudiandae et ipsum! Impedit in et cum praesentium rerum, consequuntur officia aspernatur consectetur tempora architecto ex dicta vel sit sapiente quasi quod natus modi possimus a! Quis enim, nihil iste aliquid amet tempore? Fuga, numquam perferendis. Quia voluptatibus quo officia itaque necessitatibus.</p>
+                </div>
+                <img src={logoImage.src} alt="" class="logo">
+            </div>
+        </div>
+        <div class="projects">
+            <h1 class="projects_header">Projects</h1>
+            <div class="project-gallery">
+                <Tile image={solarsystemImage.src} name="Orrery Model" description="Made in Godot with GDscript. This was my first completed project in Godot. This was a huge learning opportunity and I hope to improve this in the future."/>
+                <Tile image={solarsystemImage.src} name="Orrery Model" description="Made in Godot with GDscript. This was my first completed project in Godot. This was a huge learning opportunity and I hope to improve this in the future."/>
+                <Tile image={solarsystemImage.src} name="Orrery Model" description="Made in Godot with GDscript. This was my first completed project in Godot. This was a huge learning opportunity and I hope to improve this in the future."/>
+                <Tile image={solarsystemImage.src} name="Orrery Model" description="Made in Godot with GDscript. This was my first completed project in Godot. This was a huge learning opportunity and I hope to improve this in the future."/>
+            </div>
         </div>
     </div>
 </body>
