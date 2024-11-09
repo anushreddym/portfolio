@@ -1,6 +1,6 @@
 .project_tile {
     width: calc(50% - 20px);
-    height: 405px;
+    height: fit-content;
     background-color: #1b1a1a;
     border-radius: 18px;
     cursor: pointer;
@@ -26,8 +26,10 @@
 }
 
 .project_description {
+    height: fit-content;
     font-size: 16px;
     color: rgb(157, 157, 157);
     font-weight: 400;
     padding: 0 15px;
+    padding-bottom: 15px;
 }
