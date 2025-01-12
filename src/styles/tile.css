@@ -16,6 +16,8 @@
 .project_image {
     padding: 15px 15px;
     border-radius: 25px;
+    width: 750px;
+    height: 350px;
 }
 
 .project_name {

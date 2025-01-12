@@ -48,6 +48,15 @@ import Tile from "../components/Tile.astro"
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <p class="footer_text">Contact Me: anushmudiganti@gmail.com</p>
+        <div class="icons_holder">
+            <span class="icon"><i class="fa-brands fa-github"></i></span>
+            <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
+            <span class="icon"><i class="fa-brands fa-codepen"></i></span>
+        </div>
+    </footer>
 </body>
 
 <script is:inline>
@@ -62,5 +71,19 @@ import Tile from "../components/Tile.astro"
     }
 
     moveBackground(); 
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    console.log("project button test");
+    const projectButton = document.querySelector(".project_btn");
+    const targetSection = document.querySelector(".projects");
+
+    if(projectButton && targetSection) {
+        projectButton.addEventListener("click", () => {
+            targetSection.scrollIntoView({behavior: "smooth", block: "nearest"});
+        });
+    }
+    });
 </script>
 </html>
