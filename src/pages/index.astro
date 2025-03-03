@@ -29,7 +29,7 @@ import Tile from "../components/Tile.astro"
                 <li class="header-item" id="prj">
                     <a href="#projects">Projects</a>
                 </li>
-                <li class="header-item">
+                <li class="header-item" id="contact">
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
@@ -90,6 +90,10 @@ import Tile from "../components/Tile.astro"
                 techUsed={['Godot', 'GDscript', '2D Physics', 'Game Design', 'Orbit Simulation']} 
                 />
             </div>
+
+            <div class="contact">
+                <h1 class="contact_title">>‎ ‎  Contact</h1>
+            </div>
         </div>
     </div>
 </body>
@@ -114,6 +118,8 @@ import Tile from "../components/Tile.astro"
     const projectButton = document.querySelector(".header-item#prj");
     const projectLink = document.querySelector(".prj_link");
     const targetSection = document.querySelector(".projects");
+    const contactButton = document.querySelector(".header-item#contact")
+    const targetContact = document.querySelector(".contact");
 
     if(projectButton && targetSection) {
         projectButton.addEventListener("click", () => {
@@ -123,6 +129,12 @@ import Tile from "../components/Tile.astro"
     if(projectLink && targetSection) {
         projectLink.addEventListener("click", () => {
             targetSection.scrollIntoView({behavior: "smooth", block: "center"});
+        });
+    }
+
+    if(contactButton && targetContact) {
+        contactButton.addEventListener("click", () => {
+            targetContact.scrollIntoView({behavior: "smooth", block: "center"});
         });
     }
 
