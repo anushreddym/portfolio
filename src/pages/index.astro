@@ -93,7 +93,11 @@ import Tile from "../components/Tile.astro"
 
             <div class="contact">
                 <h1 class="contact_title">>‎ ‎  Contact</h1>
-                <p class="contact_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ab ad iusto sequi, earum cum, nihil dolores a, eum voluptas animi ex corrupti consequuntur? Neque delectus minus fuga blanditiis quas.</p>
+                <div class="contact_holder">
+                    <a href="" class="contact_text">anushmudiganti@gmail.com</a>
+                    <a href="" class="contact_text">github</a>
+                    <a href="" class="contact_text">blog</a>
+                </div>
             </div>
         </div>
     </div>
@@ -115,30 +119,28 @@ import Tile from "../components/Tile.astro"
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-    console.log("project button test");
+
     const projectButton = document.querySelector(".header-item#prj");
     const projectLink = document.querySelector(".prj_link");
     const targetSection = document.querySelector(".projects");
-    const contactButton = document.querySelector(".header-item#contact")
+    const contactButton = document.querySelector(".header-item#contact");
     const targetContact = document.querySelector(".contact");
 
-    if(projectButton && targetSection) {
-        projectButton.addEventListener("click", () => {
-            targetSection.scrollIntoView({behavior: "smooth", block: "center"});
-        });
-    }
-    if(projectLink && targetSection) {
-        projectLink.addEventListener("click", () => {
-            targetSection.scrollIntoView({behavior: "smooth", block: "center"});
-        });
+    function smoothScroll(target: Element) {
+        setTimeout(() => {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50); 
     }
 
-    if(contactButton && targetContact) {
-        contactButton.addEventListener("click", () => {
-            targetContact.scrollIntoView({behavior: "smooth", block: "center"});
-        });
+    if (projectButton && targetSection) {
+        projectButton.addEventListener("click", () => smoothScroll(targetSection));
     }
-
-    });
+    if (projectLink && targetSection) {
+        projectLink.addEventListener("click", () => smoothScroll(targetSection));
+    }
+    if (contactButton && targetContact) {
+        contactButton.addEventListener("click", () => smoothScroll(targetContact));
+    }
+});
 </script>
 </html>

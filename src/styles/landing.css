@@ -21,7 +21,7 @@ mark.other {
 }
 
 body {
-    height: 2600px;
+    height: 4000px;
     background: url("../assets/tile.png");
     background-repeat: repeat;
     display: flex;
@@ -162,6 +162,20 @@ body {
     margin-bottom: 15px;
 }
 
+.contact_holder {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.contact_text {
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(75, 123, 234);
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
 @media (max-width: 767px) {
     .header {
         justify-content: center;
@@ -205,5 +219,11 @@ body {
 
     .contact_title {
         font-size: 1.5rem;
+    }
+
+    .contact_holder {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
     }
 }
