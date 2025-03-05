@@ -194,7 +194,7 @@ body {
 #skills_image {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    max-width: 84px
 }
 
 .contact {
@@ -213,44 +213,35 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #131313;
-    padding: 15px;
+    padding: 30px;
     border-radius: 24px;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
-    gap: 15px;
 }
 
-.contact_section {
+form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: fit-content;
 }
 
-.input_text {
-    color: white;
-    font-size: 1.2em;
-    padding-bottom: 5px;
-}
 
-.input {
-    color: white;
-    background-color: #2a2a2a;
-    width: 100%;
-    height: 2.5em;
+form input, form textarea {
+    border: 0;
+    margin-bottom: 15px;
+    padding: 15px;
     border-radius: 4px;
-    text-align: left;
-    padding: 8px 8px;   
+    outline: none;
+    background-color: #252525;
+    color: white;
+    font-size: 1rem;
+    resize: none;
 }
 
-.input#message {
-    width: 100%;
-    height: 10em;
-    border-radius: 4px;
-}
-
-.input_button {
+.submit {
     background-color: rgb(75, 123, 234);
-    padding: 8px 14px;
+    padding: 15px;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -318,12 +309,12 @@ body {
 
 @media (max-width: 1000px) {
     .skill {
-        flex: 1 1 calc(100% / 5 - 15px); 
-        max-width: calc(100% / 5 - 15px);
+        flex: 1 1 calc(100% / 8 - 15px); 
+        max-width: calc(100% / 8 - 15px);
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .skill_text {
         font-size: 0.7em;
     }
