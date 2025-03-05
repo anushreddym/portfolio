@@ -79,19 +79,19 @@ body {
 
 .title {
     font-weight: 600;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     color: white;
 }
 
 .description {
     margin-top: 8vh;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: rgb(213, 212, 212);
 }
 
 .chkprj  {
     margin-top: 1vh;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: rgb(213, 212, 212);
 }
 
@@ -109,13 +109,14 @@ body {
     border: 0px solid rgb(213, 212, 212); 
     overflow-x: hidden;
     padding-bottom: 15px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5); 
 }
 
 .about_text {
     color: white;
     padding-top: 15px;
     padding-left: 15px;
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: 700;
 }
 
@@ -127,7 +128,7 @@ body {
     width: 100%;
     padding-top: 15px;
     padding-left: 15px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     color: white;
     font-weight: 500;
 }
@@ -135,7 +136,7 @@ body {
 .section_description {
     width: 100%;
     padding: 0 15px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 .projects {
@@ -144,10 +145,56 @@ body {
 
 .prj_title {
     color: white;
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: 600;
     margin-top: 75px;
     margin-bottom: 15px;
+}
+
+.skills {
+    width: 100%;
+}
+
+.skills_title {
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 75px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.skills_holder {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #131313;
+    padding: 15px;
+    border-radius: 24px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 calc(100% / 9 - 15px); 
+    max-width: calc(100% / 9 - 15px);
+}
+
+.skill_text {
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+#skills_image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .contact {
@@ -156,25 +203,14 @@ body {
 
 .contact_title {
     color: white;
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: 600;
     margin-top: 75px;
     margin-bottom: 15px;
 }
 
-.contact_holder {
-    display: flex;
-    flex-direction: row;
-    column-gap: 8px;
-}
 
-.contact_text {
-    font-size: 1.2rem;
-    color: white;
-    background-color: rgb(75, 123, 234);
-    padding: 4px 8px;
-    border-radius: 8px;
-}
+
 
 @media (max-width: 767px) {
     .header {
@@ -190,40 +226,53 @@ body {
     }
 
     .title {
-        font-size: 2.3rem;
+        font-size: 2.3em;
     }
     
     .description {
-        font-size: 1.2rem;
+        font-size: 1.2em;
     }
     
     .chkprj  {
-        font-size: 1.2rem;
+        font-size: 1.2em;
     }
     
     .about_text {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
     .section_title {
-        font-size: 1rem;
+        font-size: 1em;
     }
     
     .section_description {
-        font-size: 1rem;
+        font-size: 1em;
     }
 
     .prj_title {
-        font-size: 1.5rem;
+        font-size: 1.5em;
+    }
+
+    .skills_title {
+        font-size: 1.5em;
     }
 
     .contact_title {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
-    .contact_holder {
-        display: flex;
-        flex-direction: column;
-        row-gap: 8px;
+
+}
+
+@media (max-width: 1000px) {
+    .skill {
+        flex: 1 1 calc(100% / 5 - 15px); 
+        max-width: calc(100% / 5 - 15px);
+    }
+}
+
+@media (max-width: 400px) {
+    .skill_text {
+        font-size: 0.7em;
     }
 }
