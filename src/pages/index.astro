@@ -19,9 +19,9 @@ import Tile from "../components/Tile.astro"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%2250%22 font-size=%2275%22 text-anchor=%22middle%22 alignment-baseline=%22middle%22 fill=%22%2300ff00%22>🔵</text></svg>">
+    <link rel="icon" href={logoImage.src}>
 
-    <title>Anush's Portfolio</title>
+    <title>Anush's Portfolio - Main</title>
 </head>
 <body>
     <div class="holder">
@@ -137,11 +137,19 @@ import Tile from "../components/Tile.astro"
             <div class="contact">
                 <h1 class="contact_title">>‎ ‎  Contact</h1>
                 <div class="contact_holder">
-                    <form action="">
-                        <input type="text" id="name" placeholder="Name" required>
-                        <input type="email" id="email" placeholder="Email" required>
-                        <textarea name="" id="message" rows="8" placeholder="Message" required></textarea>
-                        <button class="submit">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+
+                        <input type="hidden" name="access_key" value="0f7b8ee1-0ce6-4ea7-be5f-ed042028a3a6">
+
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <textarea name="message" id="message" rows="8" placeholder="Message" required></textarea>
+
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <input type="hidden" name="redirect" value="https://anushreddym.github.io/portfolio/success">
+
+                        <button type="submit" class="submit">
                             <p class="btn_text">Send Message</p>
                             <i class="fa-solid fa-share-from-square"></i>
                         </button>
@@ -191,5 +199,15 @@ import Tile from "../components/Tile.astro"
         contactButton.addEventListener("click", () => smoothScroll(targetContact));
     }
 });
+</script>
+
+<script>
+    window.onload = function() {
+        const form = document.getElementById("form") as HTMLFormElement;
+
+        if (form) {
+            form.reset();
+        }
+    };
 </script>
 </html>

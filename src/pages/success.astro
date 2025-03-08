@@ -1,0 +1,47 @@
+---
+import "../styles/success.css"
+import logoImage from "../assets/logo.png"
+import checkMark from "../assets/checkMark.svg"
+---
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f00d779dcd.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href={logoImage.src}>
+
+    <title>Anush's Portfolio - Success</title>
+</head>
+<body>
+    <div class="holder">
+        <img src={checkMark.src} alt="" class="check">
+        <h1 class="header">Form submitted successfully!</h1>
+        <p class="description">Thank you! Your message has been recieved. I will respond to you soon!</p>
+        <div class="back_btn">
+            <a href="https://anushreddym.github.io/portfolio/" class="back_link">Go back</a>
+        </div>
+    </div>
+</body>
+
+<script is:inline>
+    let positionX = 0;
+    let positionY = 0;
+
+    function moveBackground() {
+        positionX += 0.05; 
+        positionY += 0.05;
+        document.body.style.backgroundPosition = `${positionX}px ${positionY}px`;
+        requestAnimationFrame(moveBackground); 
+    }
+
+    moveBackground(); 
+</script>
+
+</html>
