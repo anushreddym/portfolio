@@ -54,8 +54,8 @@ import Tile from "../components/Tile.astro"
                     <p class="section_description"><mark class="purple">anushmudiganti@gmail.com</mark></p>
                 </div>
                 <div class="section">
-                    <h1 class="section_title">>‎ ‎ Hobbies</h1>
-                    <p class="section_description"><mark class="purple">Gaming, Biking, Piano, Game Development</mark></p>
+                    <h1 class="section_title">>‎ ‎ Links</h1>
+                    <p class="section_description"><mark class="purple"><a href="https://github.com/anushreddym" target=”_blank” class="about_link">Github</a>, <a href="https://curiosityxd.itch.io/" target=”_blank” class="about_link">Itch</a>, <a href="" target=”_blank” class="about_link">Blog</a>, <a href="" target=”_blank” class="about_link">Linked In</a></mark></p>
                 </div>
                 <div class="section">
                     <h1 class="section_title">>‎ ‎ Skills</h1>
@@ -157,30 +157,30 @@ import Tile from "../components/Tile.astro"
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer class="footer">
-        <div class="footer_holder">
-            <div class="footer_links">
-                <a href="" class="link_holder">
-                    <i class="fa-brands fa-github fa-xl"></i>
-                </a>
-                <a href="" class="link_holder">
-                    <i class="fa-brands fa-itch-io fa-xl"></i>
-                </a>
-                <a href="" class="link_holder">
-                    <i class="fa-solid fa-blog fa-xl"></i>
-                </a>
-                <a href="" class="link_holder">
-                    <i class="fa-brands fa-linkedin fa-xl"></i>
-                </a>
+        <footer class="footer">
+            <div class="footer_holder">
+                <div class="footer_links">
+                    <a href="https://github.com/anushreddym" target=”_blank” class="link_holder">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                    </a>
+                    <a href="" target=”_blank” class="link_holder" id="itch">
+                        <i class="fa-brands fa-itch-io fa-xl"></i>
+                    </a>
+                    <a href="https://curiosityxd.itch.io/" class="link_holder" id="blog">
+                        <i class="fa-solid fa-blog fa-xl"></i>
+                    </a>
+                    <a href="" class="link_holder" id="linkedIn">
+                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                    </a>
+                </div>
+                <div class="powered">
+                    <p class="powered_text">Powered by Astro </p>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" id="powered_image"/>
+                </div>
             </div>
-            <div class="powered">
-                <p class="powered_text">Powered by Astro </p>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" id="powered_image"/>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 <script is:inline>

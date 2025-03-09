@@ -119,6 +119,10 @@ body {
     font-weight: 700;
 }
 
+.about_link:hover {
+    text-decoration: underline;
+}
+
 .section {
     height: fit-content;
 }
@@ -260,9 +264,10 @@ form input, form textarea {
     justify-content: center;
     align-items: center;
     background-color: #131313;
-    padding: 15px;
     height: 100px;
-    box-shadow: 0px -8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    margin-bottom: 75px;
 }
 
 .footer_holder {
@@ -285,6 +290,14 @@ form input, form textarea {
     justify-content: center;
 }
 
+.link_holder {
+    transition: all 0.1s;
+}
+
+.link_holder:hover {
+    transform: scale(1.2);
+}
+
 .powered {
     display: flex;
     flex-direction: row;
@@ -302,6 +315,18 @@ form input, form textarea {
 
 #powered_image {
     width: 24px;
+}
+
+#itch {
+    color: #FF6160;
+}
+
+#blog {
+    color: #FFA521;
+}
+
+#linkedIn {
+    color: #1469C7;
 }
 
 @media (max-width: 767px) {
