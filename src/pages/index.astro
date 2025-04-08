@@ -38,9 +38,43 @@ import Tile from "../components/Tile.astro"
     
         <div class="wrapper">
             <div class="info">
-                <h1 class="title">>‎ ‎ ‎  Hey, I'm <mark class="blue">Anush.</mark></h1>
+                <h1 class="title">
+                    <span id="typewriter"></span><span class="caret">&nbsp;&nbsp;</span>
+                </h1>
+
+                <script>
+                    const text = "Hey, I'm Anush. ";
+                    const typewriter = document.getElementById("typewriter")!;
+                    let index = 0;
+                
+                    function type() {
+                      if (index < text.length) {
+                        typewriter.innerHTML += text.charAt(index);
+                        index++;
+                        setTimeout(type, 75);
+                      }
+                    }
+                
+                    type();
+                </script>
+                  
+
                 <p class="description">High school student and game development enthusiast exploring code and technology.</p>
                 <p class="chkprj">Check out my <mark class="blue"><a href="#projects" class="prj_link">projects</a></mark> and more below.</p>
+                <div class="info_links">
+                    <a href="https://github.com/anushreddym" target=”_blank” class="info_link_holder">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                    </a>
+                    <a href="https://curiosityxd.itch.io/" target=”_blank” class="info_link_holder">
+                        <i class="fa-brands fa-itch-io fa-xl"></i>
+                    </a>
+                    <a href="" class="info_link_holder" >
+                        <i class="fa-solid fa-desktop fa-xl"></i>
+                    </a>
+                    <a href="" class="info_link_holder">
+                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                    </a>
+                </div>
             </div>
     
             <div class="about">
@@ -52,10 +86,6 @@ import Tile from "../components/Tile.astro"
                 <div class="section">
                     <h1 class="section_title">>‎ ‎ Contact</h1>
                     <p class="section_description"><mark class="purple">anushmudiganti@gmail.com</mark></p>
-                </div>
-                <div class="section">
-                    <h1 class="section_title">>‎ ‎ Links</h1>
-                    <p class="section_description"><mark class="purple"><a href="https://github.com/anushreddym" target=”_blank” class="about_link">Github</a>, <a href="https://curiosityxd.itch.io/" target=”_blank” class="about_link">Itch</a>, <a href="" target=”_blank” class="about_link">Blog</a>, <a href="" target=”_blank” class="about_link">Linked In</a></mark></p>
                 </div>
                 <div class="section">
                     <h1 class="section_title">>‎ ‎ Skills</h1>
@@ -164,11 +194,11 @@ import Tile from "../components/Tile.astro"
                     <a href="https://github.com/anushreddym" target=”_blank” class="link_holder">
                         <i class="fa-brands fa-github fa-xl"></i>
                     </a>
-                    <a href="" target=”_blank” class="link_holder" id="itch">
+                    <a href="https://curiosityxd.itch.io/" target=”_blank” class="link_holder" id="itch">
                         <i class="fa-brands fa-itch-io fa-xl"></i>
                     </a>
-                    <a href="https://curiosityxd.itch.io/" class="link_holder" id="blog">
-                        <i class="fa-solid fa-blog fa-xl"></i>
+                    <a href="" class="link_holder" id="blog">
+                        <i class="fa-solid fa-desktop fa-xl"></i>
                     </a>
                     <a href="" class="link_holder" id="linkedIn">
                         <i class="fa-brands fa-linkedin fa-xl"></i>
@@ -177,6 +207,7 @@ import Tile from "../components/Tile.astro"
                 <div class="powered">
                     <p class="powered_text">Powered by Astro </p>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" id="powered_image"/>
+                    <p class="copyright_text">© 2025 Anush</p>
                 </div>
             </div>
         </footer>
@@ -233,4 +264,5 @@ import Tile from "../components/Tile.astro"
         }
     };
 </script>
+  
 </html>
