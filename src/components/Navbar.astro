@@ -1,0 +1,78 @@
+<header class="header">
+    <div class="header_content">
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a href="" class="nav_link" id="selected">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="" class="nav_link">Projects</a>
+                </li>
+                <li class="nav_item">
+                    <a href="" class="nav_link">Blog</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+        </a>
+    </div>
+</header>
+
+<style>
+
+    :root {
+        --gray: #8D93A0;
+    }
+
+    .logo {
+        transition: all 0.1s;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        transform: rotate(30deg);
+    }
+
+    .logo svg {
+        stroke: white;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .header_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 60px;
+        max-width: 56rem;
+        margin: 0 auto;
+    }
+
+    .nav_link {
+        color: var(--gray);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.1s;
+        text-decoration: none;
+    }
+
+    .nav_list {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #selected {
+        color: white;
+    }
+
+    .nav_link:hover {
+        color: white;
+    }
+</style>
